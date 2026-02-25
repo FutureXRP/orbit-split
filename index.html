@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Orbit Split</title>
+  <meta name="description" content="A one-button orbit-flip arcade game. Easy to learn, hard to master." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <div class="title">Orbit Split</div>
+          <div class="subtitle">Flip • Thread • Survive</div>
+        </div>
+      </div>
+
+      <div class="hud">
+        <div class="pill">Score: <span id="score">0</span></div>
+        <div class="pill">Best: <span id="best">0</span></div>
+        <div class="pill">Streak: <span id="streak">0</span></div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <canvas id="c" width="900" height="600" aria-label="Orbit Split game canvas"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="card">
+          <h1>Orbit Split</h1>
+          <p class="lead">One button. Infinite skill ceiling.</p>
+
+          <div class="rules">
+            <div class="rule"><span class="k">Click / Space / Tap</span><span>Flip orbit direction</span></div>
+            <div class="rule"><span class="k">Thread the gates</span><span>Time the opening</span></div>
+            <div class="rule"><span class="k">Near-miss</span><span>More points. More panic.</span></div>
+          </div>
+
+          <div class="btnrow">
+            <button id="playBtn" class="btn primary">Play</button>
+            <button id="howBtn" class="btn">How it works</button>
+          </div>
+
+          <div class="small">
+            Tip: chase streaks — but don’t get greedy 😈
+          </div>
+        </div>
+      </div>
+
+      <div id="toast" class="toast" hidden></div>
+    </main>
+
+    <footer class="footer">
+      <div>Controls: <b>Click</b> / <b>Space</b> / <b>Tap</b> to flip</div>
+      <div class="muted">Made for GitHub Pages • No dependencies</div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
